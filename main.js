@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 
 const userRoutes = require('./routes/userRoute');
+const productRoutes = require("./routes/productRoute");
 
 const app = express();
 
@@ -23,6 +24,7 @@ mongoose.connect('mongodb+srv://mannambani007:hLFb623IKMlQXjRE@cluster0.tenux9l.
 
 
     app.use('/users', userRoutes);
+    app.use('/products',productRoutes)
 
     const PORT = 3002;
 app.listen(PORT, () => {
