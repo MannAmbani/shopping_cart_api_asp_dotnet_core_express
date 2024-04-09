@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 
 const userRoutes = require('./routes/userRoute');
 const productRoutes = require("./routes/productRoute");
+const commentRoutes = require("./routes/CommentRoute");
 
 const app = express();
 
@@ -24,7 +25,8 @@ mongoose.connect('mongodb+srv://mannambani007:hLFb623IKMlQXjRE@cluster0.tenux9l.
 
 
     app.use('/users', userRoutes);
-    app.use('/products',productRoutes)
+    app.use('/products',productRoutes);
+    app.use('/comments',commentRoutes);
 
     const PORT = 3002;
 app.listen(PORT, () => {
