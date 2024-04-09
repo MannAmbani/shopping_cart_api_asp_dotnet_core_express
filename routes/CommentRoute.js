@@ -1,5 +1,7 @@
+//importing express
 const express = require('express');
 const router = express.Router();
+//export express validation to validate user input
 const { body, validationResult, param } = require('express-validator');
 const Comment = require('../models/Comments');
 
@@ -33,7 +35,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // POST create new comment
-router.post('/', [
+router.post('/', [//validation
     body('productId').notEmpty().withMessage('Product ID cannot be empty'),
     body('userId').notEmpty().withMessage('User ID cannot be empty'),
     body('rating').isNumeric().withMessage('Rating must be a number').notEmpty().withMessage('Rating cannot be empty').custom(value => value >= 0 && value <= 5).withMessage('Rating must be between 0 and 5'),
@@ -58,7 +60,7 @@ router.post('/', [
 });
 
 // PUT update comment by ID
-router.put('/:id', [
+router.put('/:id', [//validatio
     param('id').notEmpty().withMessage('Comment ID cannot be empty'),
     body('productId').notEmpty().withMessage('Product ID cannot be empty'),
     body('userId').notEmpty().withMessage('User ID cannot be empty'),

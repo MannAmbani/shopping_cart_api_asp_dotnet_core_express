@@ -1,5 +1,7 @@
+//importing express
 const express = require('express');
 const router = express.Router();
+//validator for request validation
 const { body, validationResult, param } = require('express-validator');
 const Product = require('../models/Products');
 
@@ -33,7 +35,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // POST create new product
-router.post('/', [
+router.post('/', [//validation
     body('description').notEmpty().withMessage('Description cannot be empty'),
     body('image').notEmpty().withMessage('Image URL cannot be empty'),
     body('pricing').isNumeric().withMessage('Pricing must be a number').notEmpty().withMessage('Pricing cannot be empty').custom(value => value >= 0).withMessage('Pricing cannot be negative'),
@@ -61,7 +63,7 @@ router.post('/', [
 });
 
 // PUT update product by ID
-router.put('/:id', [
+router.put('/:id', [//validation
     param('id').notEmpty().withMessage('Product ID cannot be empty'),
     body('description').notEmpty().withMessage('Description cannot be empty'),
     body('image').notEmpty().withMessage('Image URL cannot be empty'),

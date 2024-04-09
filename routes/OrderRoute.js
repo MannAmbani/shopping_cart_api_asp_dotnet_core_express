@@ -1,5 +1,7 @@
+//importing express
 const express = require('express');
 const router = express.Router();
+//validator for request validation
 const { body, validationResult, param } = require('express-validator');
 const Order = require('../models/Orders');
 
@@ -33,7 +35,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // POST create new order
-router.post('/', [
+router.post('/', [//validation
     body('productId').notEmpty().withMessage('Product ID cannot be empty'),
     body('userId').notEmpty().withMessage('User ID cannot be empty'),
     body('quantity').isNumeric().withMessage('Quantity must be a number').notEmpty().withMessage('Quantity cannot be empty').custom(value => value >= 1).withMessage('Quantity must be at least 1'),
@@ -59,7 +61,7 @@ router.post('/', [
 });
 
 // PUT update order by ID
-router.put('/:id', [
+router.put('/:id', [//validation
     param('id').notEmpty().withMessage('Order ID cannot be empty'),
     body('productId').notEmpty().withMessage('Product ID cannot be empty'),
     body('userId').notEmpty().withMessage('User ID cannot be empty'),

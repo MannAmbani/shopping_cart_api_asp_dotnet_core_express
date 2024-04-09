@@ -1,5 +1,7 @@
+//importing mongoose
 const mongoose = require('mongoose');
 
+//making schema
 const userSchema = new mongoose.Schema({
     username: {type:String},
     email: { type: String, required: true },
@@ -10,6 +12,8 @@ const userSchema = new mongoose.Schema({
 
 });
 
+//making model
 const User = mongoose.model('User', userSchema);
 
+//exporting model
 module.exports = User;

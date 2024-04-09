@@ -1,6 +1,9 @@
+//importing necessary elements
 const express = require('express');
 const router = express.Router();
+//for  handling http requests and responses validation
 const { body, validationResult, param } = require('express-validator');
+//importing models
 const Cart = require('../models/Carts');
 
 // GET all items in the cart
@@ -33,7 +36,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // POST add item to the cart
-router.post('/', [
+router.post('/', [//validation
     body('productId').notEmpty().withMessage('Product ID cannot be empty'),
     body('quantity').isNumeric().withMessage('Quantity must be a number').notEmpty().withMessage('Quantity cannot be empty').custom(value => value >= 1).withMessage('Quantity must be at least 1'),
     body('userId').notEmpty().withMessage('User ID cannot be empty')
@@ -56,7 +59,7 @@ router.post('/', [
 });
 
 // PUT update item in the cart by ID
-router.put('/:id', [
+router.put('/:id', [//validation
     param('id').notEmpty().withMessage('Cart item ID cannot be empty'),
     body('productId').notEmpty().withMessage('Product ID cannot be empty'),
     body('quantity').isNumeric().withMessage('Quantity must be a number').notEmpty().withMessage('Quantity cannot be empty').custom(value => value >= 1).withMessage('Quantity must be at least 1'),
@@ -101,4 +104,5 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+//exporting cart
 module.exports = router;
