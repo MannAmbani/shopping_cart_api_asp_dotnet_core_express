@@ -1,0 +1,658 @@
+{
+	"info": {
+		"_postman_id": "48a08ff7-576b-41b7-9803-91b6e67e287e",
+		"name": "NodeApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33003039"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mann ambani\",\r\n    \"email\": \"mann.ambani007@gmail.com\",\r\n    \"password\": \"abc123\",\r\n    \"contact\":\"56465465456\",\r\n    \"purchaseHistory\":[],\r\n    \"shippingAddress\":\"139 Jackson\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/users/6613ae51a57515610eaa9826",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"users",
+								"6613ae51a57515610eaa9826"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mann\",\r\n    \"email\": \"mann.ambani@gmail.com\",\r\n    \"password\": \"54545454ad\",\r\n    \"contact\":\"1234567895\",\r\n    \"purchaseHistory\":[],\r\n    \"shippingAddress\":\"139 Jackson\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/:id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/users/6614747f383d9beda6ca4630",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"users",
+								"6614747f383d9beda6ca4630"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/users/6614747f383d9beda6ca4630",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"users",
+								"6614747f383d9beda6ca4630"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Tshirt\",\r\n    \"image\": \"123\",\r\n    \"pricing\": 200,\r\n    \"shippingCost\": 300,\r\n    \"oldPrice\":180,\r\n    \"title\":\"yellow tshirt\",\r\n    \"category\":\"Men\",\r\n    \"tags\":\"Cool\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/products/6614b5b0c4e95e58f6309fe9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"products",
+								"6614b5b0c4e95e58f6309fe9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"shirt\",\r\n    \"image\": \"lahsf\",\r\n    \"pricing\": 200,\r\n    \"shippingCost\": 300,\r\n    \"oldPrice\": 180,\r\n    \"title\": \"yellow tshirt\",\r\n    \"category\": \"Men\",\r\n    \"tags\": \"Cool\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/products/6614b5b0c4e95e58f6309fe9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"products",
+								"6614b5b0c4e95e58f6309fe9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/products/6614b5b0c4e95e58f6309fe9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"products",
+								"6614b5b0c4e95e58f6309fe9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"productId\": \"6614b5aac4e95e58f6309fe7\",\r\n    \"userId\": \"6613ae51a57515610eaa9826\",\r\n    \"rating\": 5,\r\n    \"images\": [],\r\n    \"text\": \"assdddfff stuff\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/comments/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"comments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/comments/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"comments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/comments/6614c6a0a3080d023831486a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"comments",
+								"6614c6a0a3080d023831486a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"productId\": \"6614b5aac4e95e58f6309fe7\",\r\n    \"userId\": \"6613ae51a57515610eaa9826\",\r\n    \"rating\": 5,\r\n    \"images\": [],\r\n    \"text\": \"asdasd stuff\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/comments/6614c6a0a3080d023831486a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"comments",
+								"6614c6a0a3080d023831486a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/comments/6614c717a3080d023831486e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"comments",
+								"6614c717a3080d023831486e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carts",
+			"item": [
+				{
+					"name": "carts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"6614b5aac4e95e58f6309fe7\",\r\n    \"quantity\": 4,\r\n    \"userId\": \"6613ae51a57515610eaa9826\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/carts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"carts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "carts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/carts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"carts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "carts",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"6614b5aac4e95e58f6309fe7\",\r\n    \"quantity\": 50,\r\n    \"userId\": \"6613ae51a57515610eaa9826\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/carts/6614d4d2050cf9b5a1c1002b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"carts",
+								"6614d4d2050cf9b5a1c1002b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cart/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/carts/6614d4d2050cf9b5a1c1002b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"carts",
+								"6614d4d2050cf9b5a1c1002b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cart/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/carts/6614d504050cf9b5a1c1002d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"carts",
+								"6614d504050cf9b5a1c1002d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"productId\": \"6614b5aac4e95e58f6309fe7\",\r\n    \"userId\": \"6613ae51a57515610eaa9826\",\r\n    \"quantity\":7,\r\n    \"totalPrice\": 300,\r\n    \"shippingAddress\":\"123asda\",\r\n    \"status\":\"Active\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/orders/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/orders/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/orders/6614db5cde457bcd3b8df463",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								"6614db5cde457bcd3b8df463"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/orders/6614db5cde457bcd3b8df463",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								"6614db5cde457bcd3b8df463"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"productId\": \"6614b5aac4e95e58f6309fe7\",\r\n    \"userId\": \"6613ae51a57515610eaa9826\",\r\n    \"quantity\":70000,\r\n    \"totalPrice\": 30000,\r\n    \"shippingAddress\":\"hjgmhmhjbjb\",\r\n    \"status\":\"Active\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/orders/6614da50728bd643073f7913",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"orders",
+								"6614da50728bd643073f7913"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
